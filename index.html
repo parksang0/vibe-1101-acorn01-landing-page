@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IntoTheSec의 보안이야기</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Title Bar -->
+  <header class="top-bar">
+    <div class="container">
+      <div class="brand">
+        <span class="brand-pill">VIBE</span>
+        <span class="brand-text">IntoTheSec의 보안이야기</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Top Image and Slogan -->
+    <section class="hero" id="top">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <p class="hero-kicker">Vibe Coding Showcase</p>
+        <h1 class="hero-title">반응형 웹페이지</h1>
+        <p class="hero-subtitle">
+          나의 바이브 코딩 결과물을 한 눈에, 모든 디바이스에서 깔끔하게.
+        </p>
+        <div class="hero-actions">
+          <button class="btn primary" data-scroll-target="#clips">YouTube 클립 보기</button>
+          <a class="btn ghost" href="https://github.com/junsang-dong/cloud-vibe-1007-docker" target="_blank" rel="noopener">
+            GitHub Repos 열기
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Middle YouTube Clips -->
+    <section class="section" id="clips">
+      <div class="container">
+        <div class="section-header">
+          <h2>Vibe Coding YouTube Clips</h2>
+          <p>바이브 코딩 흐름을 담은 4개의 하이라이트 영상입니다.</p>
+        </div>
+        <div class="grid videos-grid">
+          <!-- All 4 thumbnails point to the same video URL as requested -->
+          <article class="card video-card">
+            <a href="https://www.youtube.com/watch?v=WInPBmCK3l4" target="_blank" rel="noopener">
+              <div class="thumb-wrapper">
+                <img src="https://img.youtube.com/vi/WInPBmCK3l4/hqdefault.jpg" alt="Vibe Coding Clip 1" />
+                <span class="play-badge">▶</span>
+              </div>
+              <div class="card-body">
+                <h3>Clip 01 · Vibe Flow</h3>
+                <p>바이브 코딩의 첫 번째 흐름을 확인해 보세요.</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="card video-card">
+            <a href="https://www.youtube.com/watch?v=WInPBmCK3l4" target="_blank" rel="noopener">
+              <div class="thumb-wrapper">
+                <img src="https://img.youtube.com/vi/WInPBmCK3l4/hqdefault.jpg" alt="Vibe Coding Clip 2" />
+                <span class="play-badge">▶</span>
+              </div>
+              <div class="card-body">
+                <h3>Clip 02 · Responsive</h3>
+                <p>반응형 레이아웃을 구성하는 과정을 살펴보세요.</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="card video-card">
+            <a href="https://www.youtube.com/watch?v=WInPBmCK3l4" target="_blank" rel="noopener">
+              <div class="thumb-wrapper">
+                <img src="https://img.youtube.com/vi/WInPBmCK3l4/hqdefault.jpg" alt="Vibe Coding Clip 3" />
+                <span class="play-badge">▶</span>
+              </div>
+              <div class="card-body">
+                <h3>Clip 03 · Clean UI</h3>
+                <p>깔끔한 UI와 마이크로 인터랙션을 경험해 보세요.</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="card video-card">
+            <a href="https://www.youtube.com/watch?v=WInPBmCK3l4" target="_blank" rel="noopener">
+              <div class="thumb-wrapper">
+                <img src="https://img.youtube.com/vi/WInPBmCK3l4/hqdefault.jpg" alt="Vibe Coding Clip 4" />
+                <span class="play-badge">▶</span>
+              </div>
+              <div class="card-body">
+                <h3>Clip 04 · Details</h3>
+                <p>디테일을 살려 완성도를 높이는 과정을 담았습니다.</p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom GitHub Repos -->
+    <section class="section section-alt" id="repos">
+      <div class="container">
+        <div class="section-header">
+          <h2>GitHub Repos</h2>
+          <p>바이브 코딩 프로젝트의 코드를 직접 확인해 보세요.</p>
+        </div>
+        <div class="card github-card">
+          <div class="github-meta">
+            <span class="github-label">Repository</span>
+            <a class="github-link" href="https://github.com/junsang-dong/cloud-vibe-1007-docker" target="_blank" rel="noopener">
+              junsang-dong / cloud-vibe-1007-docker
+            </a>
+          </div>
+          <p class="github-desc">
+            도커 기반으로 구성된 클라우드 바이브 코딩 환경. 실습과 데모를 위한 최적의 설정을 담고 있습니다.
+          </p>
+          <button class="btn secondary" data-open-github>
+            GitHub에서 열기
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Contact Bar -->
+  <footer class="contact-bar">
+    <div class="container contact-content">
+      <span>에이콘출판 도토리</span>
+      <span>na@naver.com</span>
+      <a href="https://github.com/junsang-dong" target="_blank" rel="noopener">https://github.com/junsang-dong</a>
+    </div>
+  </footer>
+
+  <button class="scroll-top" aria-label="맨 위로 이동">
+    ↑
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
