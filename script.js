@@ -4,6 +4,40 @@ document.addEventListener("DOMContentLoaded", () => {
   const githubButton = document.querySelector("[data-open-github]");
   const topBar = document.querySelector(".top-bar");
 
+  // Visitor counter (persisted per device via localStorage)
+  const VISITOR_KEY = "vibe_landing_visitor_count";
+  const visitorEl = document.getElementById("visitor-count");
+  if (visitorEl) {
+    let count = parseInt(localStorage.getItem(VISITOR_KEY) || "0", 10);
+    count += 1;
+    localStorage.setItem(VISITOR_KEY, String(count));
+    visitorEl.textContent = count.toLocaleString();
+  }
+
+  // Theme switch (dark / light)
+  const THEME_KEY = "vibe_landing_theme";
+  const html = document.documentElement;
+  const themeToggle = document.getElementById("theme-toggle");
+
+  const applyTheme = (theme) => {
+    html.setAttribute("data-theme", theme);
+    if (themeToggle) {
+      themeToggle.classList.toggle("is-light", theme === "light");
+      themeToggle.setAttribute("aria-label", theme === "dark" ? "라이트 모드로 전환" : "다크 모드로 전환");
+    }
+  };
+
+  const savedTheme = localStorage.getItem(THEME_KEY) || "dark";
+  applyTheme(savedTheme);
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const next = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      localStorage.setItem(THEME_KEY, next);
+      applyTheme(next);
+    });
+  }
+
   const smoothScrollTo = (targetSelector) => {
     const target = document.querySelector(targetSelector);
     if (!target) return;

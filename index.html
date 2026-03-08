@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,6 +13,16 @@
       <div class="brand">
         <span class="brand-pill">VIBE</span>
         <span class="brand-text">IntoTheSec의 보안이야기</span>
+      </div>
+      <div class="top-bar-actions">
+        <div class="visitor-counter" aria-label="페이지 방문자 수">
+          <span class="visitor-counter-label">방문자</span>
+          <span class="visitor-counter-value" id="visitor-count">0</span>
+        </div>
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="다크 모드 전환">
+          <span class="theme-icon theme-icon-dark" aria-hidden="true">🌙</span>
+          <span class="theme-icon theme-icon-light" aria-hidden="true">☀️</span>
+        </button>
       </div>
     </div>
   </header>
