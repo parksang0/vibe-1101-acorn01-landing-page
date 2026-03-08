@@ -1,1 +1,0 @@
-# vibe-1101-acorn01-landing-page
